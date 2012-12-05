@@ -396,7 +396,7 @@ class XMPPHP_XMLStream {
 		);
 		$stop  = substr($buff, -strlen($start) - 3);
 
-		if ($start == '?xml') {
+		if ($start == '?xml' || substr($start,-6) == 'stream') {
 			//starting with an xml tag. this means a stream is being
 			// opened, which is not much of data, so no fear it's
 			// not complete
